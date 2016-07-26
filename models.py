@@ -27,8 +27,8 @@ class Accommodatie(models.Model):
     type = models.IntegerField(db_column='AccType')
     address = models.CharField(db_column='AccAddress', max_length=50, blank=True, null=True)  
     zipcode = models.CharField(db_column='AccZip', max_length=10, blank=True, null=True)  
-    city = models.CharField(db_column='AccPlace', max_length=50, blank=True, null=True)  
-    country = models.IntegerField(db_column='AccCountry')  
+    city = models.CharField(db_column='AccPlace', max_length=50, blank=True, null=True)
+    country = models.ForeignKey('Country')
     district = models.IntegerField(db_column='AccDistrict')  
     rooms = models.IntegerField(db_column='AccNmbRooms')  
     places = models.IntegerField(db_column='AccNmbSPlac')  
@@ -140,3 +140,29 @@ class Users(models.Model):
 
     class Meta:
         db_table = 'users'
+
+     
+class Country(models.Model):
+    countryid = models.IntegerField(unique=True)
+    name = models.CharField(max_length=40)
+    
+    class Meta:
+        verbose_name = 'country'
+        verbose_name_plural = 'countries'
+
+    def __unicode__(self):
+        return self.name
+     
+class District(models.Model):
+    country = models.ForeignKey('Country')
+    districtid = models.IntegerField()
+    name = models.CharField(max_length=40)
+    
+    class Meta:
+        verbose_name = 'district'
+        verbose_name_plural = 'districts'
+        unique_together = ('country', 'districtid')
+
+    def __unicode__(self):
+        return self.name
+
