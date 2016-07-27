@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-26 17:59+0000\n"
+"POT-Creation-Date: 2016-07-27 07:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: hplan_app/models.py:28
+#: hplan_app/models.py:28 hplan_app/models.py:94
 msgid "property manager"
 msgstr "accommodatie beheerder"
 
@@ -26,7 +26,7 @@ msgstr "accommodatie beheerder"
 msgid "type"
 msgstr "type"
 
-#: hplan_app/models.py:30
+#: hplan_app/models.py:30 hplan_app/models.py:78
 msgid "address"
 msgstr "adres"
 
@@ -34,11 +34,11 @@ msgstr "adres"
 msgid "zip code"
 msgstr "postcode"
 
-#: hplan_app/models.py:32
+#: hplan_app/models.py:32 hplan_app/models.py:80
 msgid "city"
 msgstr "plaats"
 
-#: hplan_app/models.py:33
+#: hplan_app/models.py:33 hplan_app/models.py:81
 msgid "country"
 msgstr "land"
 
@@ -165,3 +165,57 @@ msgstr "accommodatie"
 #: hplan_app/models.py:69
 msgid "accommodations"
 msgstr "accommodaties"
+
+#: hplan_app/models.py:77
+msgid "name"
+msgstr "naam"
+
+#: hplan_app/models.py:79
+#, fuzzy
+#| msgid "zip code"
+msgid "zipcode"
+msgstr "postcode"
+
+#: hplan_app/models.py:82
+msgid "phone"
+msgstr "telefoon"
+
+#: hplan_app/models.py:83
+msgid "fax"
+msgstr "fax"
+
+#: hplan_app/models.py:84
+msgid "mobile"
+msgstr "mobiel"
+
+#: hplan_app/models.py:85
+#, fuzzy
+#| msgid "introduction date"
+msgid "registration date"
+msgstr "introductie datum"
+
+#: hplan_app/models.py:86
+#, fuzzy
+#| msgid "date last changed"
+msgid "last change date"
+msgstr "datum laatste wijziging"
+
+#: hplan_app/models.py:87
+msgid "English speaking"
+msgstr "Engels sprekend"
+
+#: hplan_app/models.py:88
+msgid "Dutch speaking"
+msgstr "Nederlands sprekend"
+
+#: hplan_app/models.py:89
+msgid "German speaking"
+msgstr "Duits sprekend"
+
+#: hplan_app/models.py:90
+msgid "French speaking"
+msgstr "Frans sprekend"
+
+#: hplan_app/models.py:95
+msgid "propertymanagers"
+msgstr "accommodatie beheerders"

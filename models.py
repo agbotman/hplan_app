@@ -68,29 +68,34 @@ class Accommodatie(models.Model):
         verbose_name = _('accommodation')
         verbose_name_plural = _('accommodations')
 
-    def __str__(self):
+    def __unicode__(self):
         return '%s, %s, %s' % (self.address, self.city, self.country)
 
 
 class AccommodatieBeheerder(models.Model):
     accbehid = models.AutoField(db_column='AccBehID', primary_key=True)  
-    fullname = models.CharField(db_column='FullName', max_length=50)  
-    address = models.CharField(db_column='Address', max_length=100, blank=True, null=True)  
-    zip = models.CharField(db_column='Zip', max_length=10, blank=True, null=True)  
-    city = models.CharField(db_column='Place', max_length=50, blank=True, null=True)  
-    country = models.CharField(db_column='Country', max_length=20, blank=True, null=True)  
-    telephone = models.CharField(db_column='Telephone', max_length=20, blank=True, null=True)  
-    fax = models.CharField(db_column='Fax', max_length=20, blank=True, null=True)  
-    mobile = models.CharField(db_column='MobPhone', max_length=20, blank=True, null=True)  
-    datumgeregistreerd = models.DateTimeField(db_column='DatumGeregistreerd')  
-    datumgewijzigd = models.DateTimeField(db_column='DatumGewijzigd', blank=True, null=True)  
-    contact_en = models.NullBooleanField(db_column='Contact_EN', blank=True, null=True)  
-    contact_nl = models.NullBooleanField(db_column='Contact_NL', blank=True, null=True)  
-    contact_de = models.NullBooleanField(db_column='Contact_DE', blank=True, null=True)  
-    contact_fr = models.NullBooleanField(db_column='Contact_FR', blank=True, null=True)  
+    fullname = models.CharField(_('name'), db_column='FullName', max_length=50)  
+    address = models.CharField(_('address'), db_column='Address', max_length=100, blank=True, null=True)  
+    zip = models.CharField(_('zipcode'), db_column='Zip', max_length=10, blank=True, null=True)  
+    city = models.CharField(_('city'), db_column='Place', max_length=50, blank=True, null=True)  
+    country = models.CharField(_('country'), db_column='Country', max_length=20, blank=True, null=True)  
+    telephone = models.CharField(_('phone'), db_column='Telephone', max_length=20, blank=True, null=True)  
+    fax = models.CharField(_('fax'), db_column='Fax', max_length=20, blank=True, null=True)  
+    mobile = models.CharField(_('mobile'), db_column='MobPhone', max_length=20, blank=True, null=True)  
+    datumgeregistreerd = models.DateTimeField(_('registration date'), db_column='DatumGeregistreerd')  
+    datumgewijzigd = models.DateTimeField(_('last change date'), db_column='DatumGewijzigd', blank=True, null=True)  
+    contact_en = models.NullBooleanField(_('English speaking'), db_column='Contact_EN', blank=True, null=True)  
+    contact_nl = models.NullBooleanField(_('Dutch speaking'), db_column='Contact_NL', blank=True, null=True)  
+    contact_de = models.NullBooleanField(_('German speaking'), db_column='Contact_DE', blank=True, null=True)  
+    contact_fr = models.NullBooleanField(_('French speaking'), db_column='Contact_FR', blank=True, null=True)  
 
     class Meta:
         db_table = 'accommodatie_beheerder'
+        verbose_name = _('property manager')
+        verbose_name_plural = _('propertymanagers')
+
+    def __unicode__(self):
+        return self.fullname
 
 
 class AccommodatiePictures(models.Model):
