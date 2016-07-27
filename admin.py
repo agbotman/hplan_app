@@ -5,7 +5,8 @@ from django.contrib import admin
 from .models import *
 
 class AccommodatieAdmin(admin.ModelAdmin):
-    list_filter = ('country', )
+    list_filter = (('country', admin.RelatedOnlyFieldListFilter),
+                  )
 
 admin.site.register(Accommodatie, AccommodatieAdmin)
 admin.site.register(AccommodatieBeheerder)
