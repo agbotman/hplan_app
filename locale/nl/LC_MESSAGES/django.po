@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-27 07:24+0000\n"
+"POT-Creation-Date: 2016-07-27 11:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,7 @@ msgstr "postcode"
 msgid "city"
 msgstr "plaats"
 
-#: hplan_app/models.py:33 hplan_app/models.py:81
+#: hplan_app/models.py:33 hplan_app/models.py:81 hplan_app/models.py:157
 msgid "country"
 msgstr "land"
 
@@ -166,7 +166,7 @@ msgstr "accommodatie"
 msgid "accommodations"
 msgstr "accommodaties"
 
-#: hplan_app/models.py:77
+#: hplan_app/models.py:77 hplan_app/models.py:154
 msgid "name"
 msgstr "naam"
 
@@ -219,3 +219,7 @@ msgstr "Frans sprekend"
 #: hplan_app/models.py:95
 msgid "propertymanagers"
 msgstr "accommodatie beheerders"
+
+#: hplan_app/models.py:158
+msgid "countries"
+msgstr "landen"

@@ -151,11 +151,12 @@ class Users(models.Model):
      
 class Country(models.Model):
     countryid = models.IntegerField(unique=True)
-    name = models.CharField(max_length=40)
+    name = models.CharField(_('name'), max_length=40, unique=True)
     
     class Meta:
-        verbose_name = 'country'
-        verbose_name_plural = 'countries'
+        verbose_name = _('country')
+        verbose_name_plural = _('countries')
+        ordering = ['name']
 
     def __unicode__(self):
         return self.name
