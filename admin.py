@@ -7,7 +7,7 @@ from .models import *
 class AccommodatieAdmin(admin.ModelAdmin):
     list_filter = (('country', admin.RelatedOnlyFieldListFilter),
                   )
-    list_display = ('accid', 'address', 'zipcode', 'city', 'district', 'country')
+    list_display = ('accid', 'address', 'zipcode', 'city', 'country')
 
 admin.site.register(Accommodatie, AccommodatieAdmin)
 admin.site.register(AccommodatieBeheerder)
