@@ -9,9 +9,7 @@ def link_districts(apps, schema_editor):
     District = apps.get_model('hplan_app', 'District')
     for acc in Accommodatie.objects.all():
         try:
-            print acc.country.id, acc.district
             district = District.objects.get(country_id=acc.country.id, districtid=acc.district)
-            print district.id
             acc.district_fk = district
             acc.save()
         except:

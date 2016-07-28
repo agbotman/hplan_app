@@ -31,7 +31,6 @@ class Accommodatie(models.Model):
     zipcode = models.CharField(_('zip code'), db_column='AccZip', max_length=10, blank=True, null=True)  
     city = models.CharField(_('city'), db_column='AccPlace', max_length=50, blank=True, null=True)
     country = models.ForeignKey('Country', verbose_name=_('country'))
-    district = models.IntegerField(_('district'), db_column='AccDistrict')
     district_fk = models.ForeignKey('District', blank=True, null=True)
     rooms = models.IntegerField(_('number of rooms'), db_column='AccNmbRooms')  
     places = models.IntegerField(_('number of places'), db_column='AccNmbSPlac')  
