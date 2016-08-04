@@ -1,0 +1,12 @@
+
+msgid "English"
+msgstr "Engels"
+
+msgid "Dutch"
+msgstr "Nederlands"
+
+msgid "French"
+msgstr "Frans"
+
+msgid "German"
+msgstr "Duits"

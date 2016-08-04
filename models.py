@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext
 
 from django.db import models
 
@@ -17,7 +18,7 @@ class AccDescription(models.Model):
         unique_together = ('accommodatie', 'language')
 
     def __unicode__(self):
-        return '%s, %s, %s' % (self.accommodatie.address, self.accommodatie.city, self.accommodatie.country)
+        return '(%s) %s, %s, %s' % (self.accommodatie.accid, self.accommodatie.address, self.accommodatie.city, self.accommodatie.country)
 
 
 class Accbehonuser(models.Model):
@@ -169,14 +170,25 @@ class Country(models.Model):
      
 class District(models.Model):
     country = models.ForeignKey('Country')
-    districtid = models.IntegerField()
-    name = models.CharField(max_length=40)
+    districtid = models.IntegerField(_('district id'))
+    name = models.CharField(_('name'), max_length=40)
     
     class Meta:
-        verbose_name = 'district'
-        verbose_name_plural = 'districts'
+        verbose_name = _('district')
+        verbose_name_plural = _('districts')
         unique_together = ('country', 'districtid')
 
     def __unicode__(self):
         return self.name
+        
+class Language(models.Model):
+    language_id = models.IntegerField(unique=True)
+    language = models.CharField(_('language'), max_length=25, unique=True)
+    
+    class Meta:
+        verbose_name = _('language')
+        verbose_name_plural = _('languages')
 
+    def __unicode__(self):
+        return ugettext(self.language)
+        
