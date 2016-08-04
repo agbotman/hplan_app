@@ -7,7 +7,7 @@ from django.db import models
 
 class AccDescription(models.Model):
     accommodatie = models.ForeignKey('Accommodatie', db_column='AccID')
-    language = models.IntegerField(db_column='AccLanguage')
+    language = models.ForeignKey('Language', default=1)
     description = models.TextField(_('description'), db_column='AccDescription', blank=True, null=True)  
     updatedtime = models.DateTimeField(_('date last changed'), db_column='AccUpdatedTime')  
 

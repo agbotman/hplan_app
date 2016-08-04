@@ -71,13 +71,7 @@ class AccommodatieAdmin(admin.ModelAdmin):
         js = ('http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js',
                 '/static/js/district.js')
 
-    
-#    def get_form(self, request, obj=None, **kwargs):
-#        form = super(AccommodatieAdmin, self).get_form(request, obj, **kwargs)
-#        if obj:
-#            form.base_fields['district'].queryset = District.objects.filter(country=obj.country)
-#        return form
-        
+       
 admin.site.register(Accommodatie, AccommodatieAdmin)
 admin.site.register(AccommodatieBeheerder)
 admin.site.register(AccDescription)
