@@ -7,11 +7,17 @@ from django.db import models
 class AccDescription(models.Model):
     accommodatie = models.ForeignKey('Accommodatie', db_column='AccID')
     language = models.IntegerField(db_column='AccLanguage')
-    description = models.TextField(db_column='AccDescription', blank=True, null=True)  
-    updatedtime = models.DateTimeField(db_column='AccUpdatedTime')  
+    description = models.TextField(_('description'), db_column='AccDescription', blank=True, null=True)  
+    updatedtime = models.DateTimeField(_('date last changed'), db_column='AccUpdatedTime')  
 
     class Meta:
         db_table = 'acc_description'
+        verbose_name = _('accommodation description')
+        verbose_name_plural = _('accommodation descriptions')
+        unique_together = ('accommodatie', 'language')
+
+    def __unicode__(self):
+        return '%s, %s, %s' % (self.accommodatie.address, self.accommodatie.city, self.accommodatie.country)
 
 
 class Accbehonuser(models.Model):

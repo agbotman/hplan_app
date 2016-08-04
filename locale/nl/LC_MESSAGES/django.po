@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-27 11:50+0000\n"
+"POT-Creation-Date: 2016-08-04 11:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,208 +18,214 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: hplan_app/models.py:28 hplan_app/models.py:94
-msgid "property manager"
-msgstr "accommodatie beheerder"
+#: hplan_app/admin.py:47
+msgid "District"
+msgstr "Regio"
 
-#: hplan_app/models.py:29
-msgid "type"
-msgstr "type"
+#: hplan_app/models.py:10
+msgid "description"
+msgstr "beschrijving"
 
-#: hplan_app/models.py:30 hplan_app/models.py:78
-msgid "address"
-msgstr "adres"
-
-#: hplan_app/models.py:31
-msgid "zip code"
-msgstr "postcode"
-
-#: hplan_app/models.py:32 hplan_app/models.py:80
-msgid "city"
-msgstr "plaats"
-
-#: hplan_app/models.py:33 hplan_app/models.py:81 hplan_app/models.py:157
-msgid "country"
-msgstr "land"
-
-#: hplan_app/models.py:34
-msgid "district"
-msgstr "regio"
-
-#: hplan_app/models.py:35
-msgid "number of rooms"
-msgstr "aantal kamers"
-
-#: hplan_app/models.py:36
-msgid "number of places"
-msgstr "aantal bedden"
-
-#: hplan_app/models.py:37
-msgid "homepage"
-msgstr "homepage"
-
-#: hplan_app/models.py:38 hplan_app/models.py:42
-msgid "pets allowed"
-msgstr "huisdieren toegestaan"
-
-#: hplan_app/models.py:39
-msgid "smoking not allowed"
-msgstr "roken niet toegestaan"
-
-#: hplan_app/models.py:40
-msgid "swimming pool"
-msgstr "zwembad"
-
-#: hplan_app/models.py:41
-msgid "kitchen"
-msgstr "keuken"
-
-#: hplan_app/models.py:43
-msgid "laundry facility"
-msgstr "wasvoorziening"
-
-#: hplan_app/models.py:44
-msgid "handicapped"
-msgstr "gehandicapten"
-
-#: hplan_app/models.py:46
-msgid "front picture"
-msgstr "voorste afbeelding"
-
-#: hplan_app/models.py:47
-msgid "property introduction"
-msgstr "accommodatie inleiding"
-
-#: hplan_app/models.py:48
-msgid "property introduction (Dutch)"
-msgstr "accommodatie inleiding (Nederlands)"
-
-#: hplan_app/models.py:49
-msgid "property introduction (German)"
-msgstr "accommodatie inleiding (Duits)"
-
-#: hplan_app/models.py:50
-msgid "property introduction (French)"
-msgstr "accommodatie inleiding (Frans)"
-
-#: hplan_app/models.py:51
-msgid "status"
-msgstr "status"
-
-#: hplan_app/models.py:52
-msgid "introduction date"
-msgstr "introductie datum"
-
-#: hplan_app/models.py:53
+#: hplan_app/models.py:11 hplan_app/models.py:59
 msgid "date last changed"
 msgstr "datum laatste wijziging"
 
+#: hplan_app/models.py:15
+msgid "accommodation description"
+msgstr "accommodatie beschrijving"
+
+#: hplan_app/models.py:16
+msgid "accommodation descriptions"
+msgstr "accommodatie beschrijvingen"
+
+#: hplan_app/models.py:34 hplan_app/models.py:100
+msgid "property manager"
+msgstr "accommodatie beheerder"
+
+#: hplan_app/models.py:35
+msgid "type"
+msgstr "type"
+
+#: hplan_app/models.py:36 hplan_app/models.py:84
+msgid "address"
+msgstr "adres"
+
+#: hplan_app/models.py:37
+msgid "zip code"
+msgstr "postcode"
+
+#: hplan_app/models.py:38 hplan_app/models.py:86
+msgid "city"
+msgstr "plaats"
+
+#: hplan_app/models.py:39 hplan_app/models.py:87 hplan_app/models.py:163
+msgid "country"
+msgstr "land"
+
+#: hplan_app/models.py:41
+msgid "number of rooms"
+msgstr "aantal kamers"
+
+#: hplan_app/models.py:42
+msgid "number of places"
+msgstr "aantal bedden"
+
+#: hplan_app/models.py:43
+msgid "homepage"
+msgstr "homepage"
+
+#: hplan_app/models.py:44 hplan_app/models.py:48
+msgid "pets allowed"
+msgstr "huisdieren toegestaan"
+
+#: hplan_app/models.py:45
+msgid "smoking not allowed"
+msgstr "roken niet toegestaan"
+
+#: hplan_app/models.py:46
+msgid "swimming pool"
+msgstr "zwembad"
+
+#: hplan_app/models.py:47
+msgid "kitchen"
+msgstr "keuken"
+
+#: hplan_app/models.py:49
+msgid "laundry facility"
+msgstr "wasvoorziening"
+
+#: hplan_app/models.py:50
+msgid "handicapped"
+msgstr "gehandicapten"
+
+#: hplan_app/models.py:52
+msgid "front picture"
+msgstr "voorste afbeelding"
+
+#: hplan_app/models.py:53
+msgid "property introduction"
+msgstr "accommodatie inleiding"
+
 #: hplan_app/models.py:54
+msgid "property introduction (Dutch)"
+msgstr "accommodatie inleiding (Nederlands)"
+
+#: hplan_app/models.py:55
+msgid "property introduction (German)"
+msgstr "accommodatie inleiding (Duits)"
+
+#: hplan_app/models.py:56
+msgid "property introduction (French)"
+msgstr "accommodatie inleiding (Frans)"
+
+#: hplan_app/models.py:57
+msgid "status"
+msgstr "status"
+
+#: hplan_app/models.py:58
+msgid "introduction date"
+msgstr "introductie datum"
+
+#: hplan_app/models.py:60
 msgid "date online"
 msgstr "datum online"
 
-#: hplan_app/models.py:55
+#: hplan_app/models.py:61
 msgid "accommodation kind"
 msgstr "soort accommodatie"
 
-#: hplan_app/models.py:56
+#: hplan_app/models.py:62
 msgid "users can reserve"
 msgstr "gebruikers kunnen reserveren"
 
-#: hplan_app/models.py:57
+#: hplan_app/models.py:63
 msgid "public can reserve"
 msgstr "publiek kan reserveren"
 
-#: hplan_app/models.py:58
+#: hplan_app/models.py:64
 msgid "number of days"
 msgstr "aantal dagen"
 
-#: hplan_app/models.py:59
+#: hplan_app/models.py:65
 msgid "addition accommodation kind"
 msgstr "extra accommodatie soort"
 
-#: hplan_app/models.py:60
+#: hplan_app/models.py:66
 msgid "selling price"
 msgstr "verkoopprijs"
 
-#: hplan_app/models.py:61
+#: hplan_app/models.py:67
 msgid "ground"
 msgstr "ground"
 
-#: hplan_app/models.py:62
+#: hplan_app/models.py:68
 msgid "bground"
 msgstr "bground"
 
-#: hplan_app/models.py:63
+#: hplan_app/models.py:69
 msgid "cdate"
 msgstr "cdate"
 
-#: hplan_app/models.py:64
+#: hplan_app/models.py:70
 msgid "teller1"
 msgstr "teller1"
 
-#: hplan_app/models.py:68
+#: hplan_app/models.py:74
 msgid "accommodation"
 msgstr "accommodatie"
 
-#: hplan_app/models.py:69
+#: hplan_app/models.py:75
 msgid "accommodations"
 msgstr "accommodaties"
 
-#: hplan_app/models.py:77 hplan_app/models.py:154
+#: hplan_app/models.py:83 hplan_app/models.py:160
 msgid "name"
 msgstr "naam"
 
-#: hplan_app/models.py:79
-#, fuzzy
-#| msgid "zip code"
+#: hplan_app/models.py:85
 msgid "zipcode"
 msgstr "postcode"
 
-#: hplan_app/models.py:82
+#: hplan_app/models.py:88
 msgid "phone"
 msgstr "telefoon"
 
-#: hplan_app/models.py:83
+#: hplan_app/models.py:89
 msgid "fax"
 msgstr "fax"
 
-#: hplan_app/models.py:84
+#: hplan_app/models.py:90
 msgid "mobile"
 msgstr "mobiel"
 
-#: hplan_app/models.py:85
-#, fuzzy
-#| msgid "introduction date"
+#: hplan_app/models.py:91
 msgid "registration date"
-msgstr "introductie datum"
+msgstr "registratie datum"
 
-#: hplan_app/models.py:86
-#, fuzzy
-#| msgid "date last changed"
+#: hplan_app/models.py:92
 msgid "last change date"
 msgstr "datum laatste wijziging"
 
-#: hplan_app/models.py:87
+#: hplan_app/models.py:93
 msgid "English speaking"
 msgstr "Engels sprekend"
 
-#: hplan_app/models.py:88
+#: hplan_app/models.py:94
 msgid "Dutch speaking"
 msgstr "Nederlands sprekend"
 
-#: hplan_app/models.py:89
+#: hplan_app/models.py:95
 msgid "German speaking"
 msgstr "Duits sprekend"
 
-#: hplan_app/models.py:90
+#: hplan_app/models.py:96
 msgid "French speaking"
 msgstr "Frans sprekend"
 
-#: hplan_app/models.py:95
+#: hplan_app/models.py:101
 msgid "propertymanagers"
 msgstr "accommodatie beheerders"
 
-#: hplan_app/models.py:158
+#: hplan_app/models.py:164
 msgid "countries"
 msgstr "landen"

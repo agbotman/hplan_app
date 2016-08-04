@@ -8,6 +8,9 @@ from django.utils.encoding import smart_unicode
 from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext_lazy as _
 
+class AccDescriptionInline(admin.TabularInline):
+    model = AccDescription
+
 class DistrictChoiceWidget(widgets.Select):
     def render(self, name, value, attrs=None, choices=()):
         self.choices = [(u"", u"---------")]
@@ -59,8 +62,11 @@ class AccommodatieAdmin(admin.ModelAdmin):
     list_filter = (('country', admin.RelatedOnlyFieldListFilter),
                   )
     list_display = ('accid', 'address', 'zipcode', 'city', 'district', 'country')
-    
+    inlines = [
+        AccDescriptionInline,
+    ]    
     form = AccommodatieForm
+
     class Media:
         js = ('http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js',
                 '/static/js/district.js')
