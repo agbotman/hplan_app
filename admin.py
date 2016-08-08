@@ -69,7 +69,7 @@ class AccommodatieAdmin(admin.ModelAdmin):
 
     class Media:
         js = ('http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js',
-                '/static/js/district.js')
+                '/static/js/district2.js')
 
        
 admin.site.register(Accommodatie, AccommodatieAdmin)

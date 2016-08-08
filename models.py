@@ -106,7 +106,8 @@ class AccommodatieBeheerder(models.Model):
 
 
 class AccommodatiePictures(models.Model):
-    pictureid = models.AutoField(db_column='PictureID', primary_key=True)  
+    pictureid = models.AutoField(db_column='PictureID', primary_key=True)
+    picture = models.ImageField(_('picture'), upload_to="/pictures", blank=True, null=True)
     picturetext = models.CharField(db_column='PictureText', max_length=100, blank=True, null=True)  
     picturetext_nl = models.CharField(db_column='PictureText_NL', max_length=100, blank=True, null=True)  
     picturetext_de = models.CharField(db_column='PictureText_DE', max_length=100, blank=True, null=True)  
