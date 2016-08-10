@@ -193,3 +193,12 @@ class Language(models.Model):
     def __unicode__(self):
         return ugettext(self.language)
         
+class AccommodatieType(models.Model):
+    type = models.CharField(_('type'), max_length=25, unique=True)
+    
+    class Meta:
+        verbose_name = _('accommodation type')
+        verbose_name_plural = _('accommodation types')
+
+    def __unicode__(self):
+        return ugettext(self.type)        
