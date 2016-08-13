@@ -33,7 +33,7 @@ class Accommodatie(models.Model):
     accid = models.AutoField(db_column='AccID', primary_key=True)  
     beheerder = models.ForeignKey('AccommodatieBeheerder', blank=True, null=True, db_column='AccBehID',
                                   verbose_name=_('property manager'))
-    type = models.IntegerField(_('type'), db_column='AccType')
+    type = models.ForeignKey('AccommodatieType', verbose_name=_('type'), blank=True, null=True)
     address = models.CharField(_('address'), db_column='AccAddress', max_length=50, blank=True, null=True)  
     zipcode = models.CharField(_('zip code'), db_column='AccZip', max_length=10, blank=True, null=True)  
     city = models.CharField(_('city'), db_column='AccPlace', max_length=50, blank=True, null=True)
@@ -201,4 +201,4 @@ class AccommodatieType(models.Model):
         verbose_name_plural = _('accommodation types')
 
     def __unicode__(self):
-        return ugettext(self.type)        
+        return ugettext(self.type)

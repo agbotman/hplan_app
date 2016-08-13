@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-09 15:11+0000\n"
+"POT-Creation-Date: 2016-08-11 11:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -132,7 +132,7 @@ msgstr "datum online"
 
 #: hplan_app/models.py:62
 msgid "accommodation kind"
-msgstr "soort accommodatie"
+msgstr "type accommodatie"
 
 #: hplan_app/models.py:63
 msgid "users can reserve"
@@ -148,7 +148,7 @@ msgstr "aantal dagen"
 
 #: hplan_app/models.py:66
 msgid "addition accommodation kind"
-msgstr "extra accommodatie soort"
+msgstr "extra accommodatie type"
 
 #: hplan_app/models.py:67
 msgid "selling price"
@@ -261,3 +261,49 @@ msgstr "accommodatie type"
 #: hplan_app/models.py:201
 msgid "accommodation types"
 msgstr "accommodatie types"
+
+msgid "Rental"
+msgstr "Vakantiewoning"
+
+msgid "Room"
+msgstr "Kamer"
+
+msgid "Aparthotel"
+msgstr "Aparthotel"
+
+msgid "Bed and Breakfast"
+msgstr "Bed and Breakfast"
+
+msgid "Gîte"
+msgstr "Gîte"
+
+msgid "Quinta"
+msgstr "Quinta"
+
+msgid "Apartment complex"
+msgstr "Appartementencomplex"
+
+msgid "Exclusive villa"
+msgstr "Exclusieve villa"
+
+msgid "Villa"
+msgstr "Villa"
+
+msgid "Mobile home"
+msgstr "Stacaravan"
+
+msgid "Hotel"
+msgstr "Hotel"
+
+msgid "Chalet"
+msgstr "Chalet"
+
+msgid "Caravan"
+msgstr "Caravan"
+
+msgid "Bungalow"
+msgstr "Bungalow"
+
+msgid "Apartment"
+msgstr "Appartement"
+
