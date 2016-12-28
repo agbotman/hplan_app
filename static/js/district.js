@@ -1,6 +1,7 @@
 var DISTRICTS = {};
 
 function fill_districts(country_id) {
+    alert("hier ben ik!");
     if (DISTRICTS[country_id]) {
         $("#id_district").html(DISTRICTS[country_id]);
     } else {
@@ -19,5 +20,6 @@ function fill_districts(country_id) {
 }
 
 $(document).ready(function() {
+    alert("document ready");
   $("#id_country").change(function() { fill_districts($(this).val()); });
 });

@@ -65,11 +65,25 @@ class AccommodatieAdmin(admin.ModelAdmin):
     inlines = [
         AccDescriptionInline,
     ]    
+    fieldsets = (
+        (None, {
+            'fields': ('type', 'address', 'zipcode', 'city', 'country', 'district',
+                        ('rooms', 'places'), 'homepage',
+                      ),
+            'classes': ('extrapretty'),
+               }
+        ),
+        (_('Services'), {
+                          'fields': (('vz1', 'vz2', 'vz3', 'vz4'), ('vz5', 'vz6', 'vz7'),),
+                          'classes': ('collapse',),
+                        }
+        ),
+    )
     form = AccommodatieForm
 
     class Media:
         js = ('http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js',
-                '/static/js/district2.js')
+                '/static/js/district.js',)
 
        
 admin.site.register(Accommodatie, AccommodatieAdmin)
